@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import AuthPopup from "./components/AuthPopup";
+import AuthPopup from "../components/AuthPopup";
 
 function App() {
   const [open, setOpen] = useState(false);
