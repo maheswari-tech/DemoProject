@@ -58,5 +58,9 @@ function Footer() {
   );
 }
 
+<<<<<<< HEAD
 export default Footer;
 /* flex-column and min-vh-100 makes sure footer stays at the bottom */
+=======
+export default Footer;
+>>>>>>> main
