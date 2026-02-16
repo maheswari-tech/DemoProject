@@ -1,14 +1,30 @@
+import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-import footer from './components/footer';
+import Hero from './components/Hero';
+import Footer from './components/Footer'; // Capital 'F' use pannunga
 
 function App() {
   return (
-    <div>
+    /* flex-column and min-vh-100 makes sure footer stays at the bottom */
+    <div className="d-flex flex-column min-vh-100">
+      
+      {/* 1. Navigation Bar */}
       <Navbar />
-      <footer />
-      <div className="container mt-4">
-      </div>
+      
+      {/* 2. Hero Section (iPhone 15 Pro Details) */}
+      <main className="flex-grow-1">
+        <Hero />
+        
+        {/* Future-la vera content venum na inga add pannalam */}
+        <div className="container mt-4">
+          {/* Example: <ProductList /> */}
+        </div>
+      </main>
+
+      {/* 3. Footer Section (Oru thadava render panna pothum) */}
+      <Footer />
+      
     </div>
   );
 }
