@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Footer from './components/Footer'; 
+import Footer from './components/footer'; 
 import Reviews from './components/Reviews';
 
 function App() {
