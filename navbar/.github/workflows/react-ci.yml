@@ -8,6 +8,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: navbar
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -19,9 +23,6 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: ./DemoProject/navbar
 
       - name: Build React App
         run: npm run build
-        working-directory: ./DemoProject/navbar
-
