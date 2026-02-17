@@ -2,7 +2,9 @@ name: React CI Build
 
 on:
   push:
-    branches: [ main ]
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
 
 jobs:
   build:
@@ -10,19 +12,19 @@ jobs:
 
     defaults:
       run:
-        working-directory: navbar
+        working-directory: navbar   
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v3
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
           node-version: 18
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build React App
+      - name: Build React app
         run: npm run build
