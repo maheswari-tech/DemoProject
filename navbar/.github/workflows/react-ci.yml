@@ -3,28 +3,26 @@ name: React CI Build
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
 
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: 18
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
 
-    - name: Install dependencies
-      run: npm install
-      working-directory: ./navbar
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./DemoProject/navbar
 
-    - name: Build project
-      run: npm run build
-      working-directory: ./navbar
+      - name: Build React App
+        run: npm run build
+        working-directory: ./DemoProject/navbar
+
